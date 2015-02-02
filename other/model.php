@@ -11,6 +11,14 @@
 </style>
 <?php
 
+//вывод дополнительных полей в листвью
+function get_list_view_data()
+{
+	$temp_array = $this->get_list_view_array();
+	$temp_array['PX_ACCOUNTCONTACTS_CONTACTSCONTACTS_IDB'] = $this->px_accountcontacts_contactscontacts_idb;
+	return $temp_array;
+}
+
 //получить данные из файла modules/<module>/language/<language>.lang.php
 global $current_language;
 $mod_strings = return_module_language($current_language, $this->module);
