@@ -14,6 +14,25 @@ $layout_defs['Tasks']['subpanel_setup']['calls'] = array(
 	),
 );
 
+
+$layout_defs['<<module name of parent module>>']['subpanel_setup']['<<subpanel name>>'] = array(
+// numeric order position of subpanel by default ( lowest number comes first )
+'order' => 10,
+'sort_by' => '<<default sort field>>',
+'sort_order' => '<<default sort order>>',
+'title_key' => '<<LBL_SUBPANEL_TITLE>>',
+'subpanel_name' => 'default',
+'module' => '<<module name of subpanel module>>',
+// Specify the custom function to call
+'get_subpanel_data' => 'function:getSubpanelQueryParts',
+// Set to true to indicate we are building a custom SQL query
+'generate_select' => true,
+'function_parameters' => array(
+// File where the above function is defined at
+'import_function_file' => 'custom/application/Ext/Utils/custom_utils.ext.php',
+),
+); 
+
 //описание самой субпанели
 
 if (!defined('sugarEntry') || !sugarEntry) die('Not A Valid Entry Point');
