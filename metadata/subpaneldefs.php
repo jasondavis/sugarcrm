@@ -107,6 +107,8 @@ $subpanel_layout = array(
 		),
 		'remove_button' => array(
 			'vname' => 'LBL_REMOVE',
+			//обновление страницы сразу после удаления записи
+			'refresh_page' => 1,
 			'widget_class' => 'SubPanelRemoveButtonAccount',
 			'width' => '4%',
 			'default' => true,
