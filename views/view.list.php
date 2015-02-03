@@ -18,4 +18,18 @@ class AccountsViewList extends ViewList
 		$this->lv->delete = false;
 		$this->lv->export = false;
 	}
+	
+	
+	function listViewProcess() {
+        global $current_user;
+        $this->processSearchForm();
+        if(!$current_user->is_admin) // remove this condition if you dont want admin user to view the "Closed Lost" Opportunities.
+            $this->params['custom_where'] = ' AND opportunities.sales_stage <> "Closed Lost" ';
+      
+        if (empty($_REQUEST['search_form_only']) || $_REQUEST['search_form_only'] == false) {
+            $this->lv->setup($this->seed, 'include/ListView/ListViewGeneric.tpl', $this->where, $this->params);
+            $savedSearchName = empty($_REQUEST['saved_search_select_name']) ? '' : (' - ' . $_REQUEST['saved_search_select_name']);
+            echo $this->lv->display();
+        }
+    }
 }
