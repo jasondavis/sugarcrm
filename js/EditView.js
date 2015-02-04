@@ -281,3 +281,24 @@ open_popup(
 	true,
 	'popupdefs_pl'
 );
+
+
+//Для перенаправления браузера путём POST-запроса используем следующую функцию: 
+function pxLocationAsPost(url, fields, inNewTab) {
+	var $ = jQuery;
+	fields = fields || {};
+	inNewTab = !!inNewTab;
+ 
+	var form = $("<form>");
+	form.attr("action", url).attr("method", "post").attr("enctype", "multipart/form-data");
+	if (inNewTab) {
+		form.attr("target", "_blank");
+	}
+	$.each(fields, function(key) {
+		form.append('<input type="text" name="' + key + '" value="' + this + '" />');
+	});
+	form.appendTo($('body')).submit().remove();
+}
+
+
+
