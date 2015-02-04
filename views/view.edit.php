@@ -8,7 +8,7 @@ class PX_BrandsViewEdit extends ViewEdit
 {
  
 //	public $useForSubpanel = true;  // Чтобы класс использовался также для субпанели
- 
+ 	//заполнение поля родительского контрагента при переходе из формы создания в субпанели, в которой это поле отсутствует
 	function display() {
 		// В process заполняется $this->ev->fieldDefs из бина и реквеста
 		$this->ev->process();
