@@ -1,5 +1,5 @@
 <?php
-//custom/metadata/Zagorye.php
+//custom/metadata/ProjectName.php
 $dictionary["px_books_users"] = array(
 	'true_relationship_type' => 'many-to-many',
 	'from_studio' => true,
@@ -71,6 +71,8 @@ $dictionary["px_books_users"] = array(
 		),
 );
 
+//custom/Extension/application/Ext/TableDictionary/
+include('custom/metadata/px_books_usersMetaData.php');
 
 //custom/Extension/modules/Users/Ext/Vardefs/ProjectName.php
 $dictionary["User"]["fields"]["px_books_users"] = array(
