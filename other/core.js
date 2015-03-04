@@ -14,3 +14,10 @@ function unformatNumber(n, num_grp_sep, dec_sep) {
 	return '';
 }
 // unformatNumber("124,5",num_grp_sep,dec_sep) returned 1245
+
+
+
+requiredTxt = SUGAR.language.get('app_strings', 'ERR_MISSING_REQUIRED_FIELDS');//Пропущены обязательные поля:
+invalidTxt = SUGAR.language.get('app_strings', 'ERR_INVALID_VALUE');//Неверное значение:
+nomatchTxt = SUGAR.language.get('app_strings', 'ERR_SQS_NO_MATCH_FIELD');//Нет совпадения для поля:
+
