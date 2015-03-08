@@ -301,4 +301,11 @@ function pxLocationAsPost(url, fields, inNewTab) {
 }
 
 
-
+//проверка на заполнение поля
+$('#reason_for_refusal').keyup(function(){
+			if(this.value.match(/\S/)!=null){
+				$('#ok_button').button( "option", "disabled", false );
+			}else{
+				$('#ok_button').button( "option", "disabled", true );
+			}
+		});
