@@ -72,7 +72,7 @@ $tmp = array(
 	
 	// Relationship Definition
 	'relationships'=>array (
-		'contact_px_regular_greetings' => array(
+		'contacts_cats_flex' => array(
 			'lhs_module'        => 'Contacts',
 			'lhs_table'         => 'contacts',
 			'lhs_key'           => 'id',
@@ -83,7 +83,7 @@ $tmp = array(
 			'relationship_role_column' => 'parent_type',
 			'relationship_role_column_value' => 'Contacts',
 		),
-		'account_px_regulargreetings' => array(
+		'accounts_cats_flex' => array(
 			'lhs_module'        => 'Accounts',
 			'lhs_table'         => 'accounts',
 			'lhs_key'           => 'id',
