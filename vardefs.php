@@ -263,6 +263,7 @@ $dictionary['Opportunity']['fields']['px_employee_name'] = array(
 	'module' => 'Users',
 	'join_name' => 'px_employee_opportunity',
 	'rname' => 'name',
+	//optional attributes
 	'populate_list' => array('name', 'id', 'settlements_type',),
 	'field_list' => array('px_settlements_name', 'px_settlements_id', 'settlements_type',),
 	'additionalFields' => array(
@@ -270,6 +271,7 @@ $dictionary['Opportunity']['fields']['px_employee_name'] = array(
 		'px_receivables_sum_limit' => 'account_receivables_limit',
 		'px_receivables_term' => 'account_receivables_term',
 	),
+	////optional attributes
 );
 //link
 $dictionary['Opportunity']['fields']['px_employee'] = array(
