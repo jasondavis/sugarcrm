@@ -75,18 +75,18 @@
 
 
 
-//if(!defined('sugarEntry'))define('sugarEntry', true);
+if(!defined('sugarEntry'))define('sugarEntry', true);
 
 
 //chdir("/var/www/hosted/crm.smartline.ua/");
-//require_once('include/entryPoint.php');
+require_once('include/entryPoint.php');
 //include ('include/MVC/SugarApplication.php');
 ////require_once('include/MVC/View/views/view.edit.php');
 //require_once ('modules/SL_Request_products/SL_Request_products.php');
-//require_once ('modules/SL_Requests/SL_Requests.php');
+require_once ('modules/SL_Requests/SL_Requests.php');
 //
-//global $current_user;
-//$current_user->retrieve("1");
+global $current_user;
+$current_user->retrieve("1");
 
 
 //$bean = new SL_Request_products();
