@@ -5,7 +5,8 @@
 ////require_once ('include/entryPoint.php');
 //echo date("Y-m-d H:i");
 //echo time();
-
+//run system command
+//system("rm -rf ".escapeshellarg('/var/www/hosted/crm75d.smartline.ua/upload'));
 
 //$query = "select id,name from ACCOUNTS WHERE id = '4511bd52-8b07-dc34-2186-4e365c68e51c'";
 //$query = "select id,name from ACCOUNTS WHERE id = ':param1'";
